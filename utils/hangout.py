@@ -120,13 +120,13 @@ def reply_decide(input_text):
     reply_cam *= 1 + (replies_since_last_cam * 0.05)
 
     # Reply with gain / lose camera-ness based on setting
-    if camera_look_level is "Active Watching":
+    if camera_look_level == "Active Watching":
         reply_cam *= 1.47
-    elif camera_look_level is "High":
+    elif camera_look_level == "High":
         reply_cam *= 1.04
-    elif camera_look_level is "Low":
+    elif camera_look_level == "Low":
         reply_cam *= 0.67
-    elif camera_look_level is "None":
+    elif camera_look_level == "None":
         reply_cam *= 0.0
 
     # Reply will have more camera-ness if we say "look at this", "see this". Use keyword list.
